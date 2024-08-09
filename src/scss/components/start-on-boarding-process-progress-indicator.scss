@@ -1,0 +1,54 @@
+@import "/src/scss/settings/variables.scss";
+@import "/src/scss/settings/mixins.scss";
+
+.start-on-boarding-process-progress-indicator-main-container {
+  width: 100%;
+  margin-top: 1rem;
+
+  .rs-panel-body {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+
+    @include hide-scrollar;
+    padding: 1rem !important;
+
+    .start-on-boarding-process-progress-indicator-status-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+
+      .start-on-boarding-process-progress-indicator-status {
+        padding: 1rem 1.2rem;
+        border-radius: 50%;
+        background-color: $sidebar-color;
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .start-on-boarding-process-progress-indicator-status-tick-icon {
+        padding: 0.7rem 0.8rem;
+        border-radius: 50%;
+        background-color: $sidebar-color;
+        margin: 1rem 0;
+      }
+
+      .start-on-boarding-process-progress-indicator-status-title {
+        font-weight: 600;
+        text-align: center;
+        @include desktop_only {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .start-on-boarding-process-progress-indicator-divider {
+    border: 1px solid $sidebar-color;
+    @include desktop_only {
+      min-width: 10rem;
+    }
+    min-width: 5rem;
+  }
+}

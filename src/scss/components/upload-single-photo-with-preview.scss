@@ -1,0 +1,31 @@
+.upload-single-photo-container {
+  width: fit-content;
+
+  .upload-single-photo-preview-image-container {
+    position: relative;
+
+    .upload-single-photo-image,
+    .upload-single-photo-default-photo {
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .upload-single-photo-cancel-button-container {
+      padding: 0.2rem;
+      position: absolute;
+      bottom: 0;
+      right: 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #CED1D3 ;
+    }
+  }
+
+  .upload-single-photo-input {
+    display: none;
+  }
+}

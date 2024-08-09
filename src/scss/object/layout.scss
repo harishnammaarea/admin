@@ -1,0 +1,79 @@
+@import "/src/scss/settings/variables.scss";
+
+.app-main-container {
+  background: $color-body-background;
+}
+
+.app-component-container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 1rem;
+}
+
+.rs-sidebar {
+  height: 100vh;
+  overflow: auto;
+  background-color: $sidebar-color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-header-logo {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
+
+.rs-sidenav {
+  width: 100%;
+
+  .rs-sidenav-nav > .rs-sidenav-item,
+  .rs-sidenav-nav > .rs-dropdown .rs-dropdown-toggle {
+    margin-top: 5px !important;
+    color: $sidebar-default-text-color;
+    text-decoration: none;
+  }
+
+  .rs-sidenav-item {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+
+    &:hover {
+      background: $sidebar-onhover-color !important;
+      color: $sidebar-onhover-text-color !important;
+      transition: all 1s;
+
+      .rs-sidenav-item-icon {
+        fill: $sidebar-active-text-color;
+        transition: all 1s;
+      }
+    }
+
+    .rs-sidenav-item-icon {
+      position: absolute;
+      left: 20px;
+      fill: #ffffff;
+    }
+
+    &.active {
+      background-color: $color-body-background;
+      color: $sidebar-color;
+
+      .rs-sidenav-item-icon {
+        fill: $sidebar-active-text-color;
+      }
+    }
+  }
+
+  .sidebar-header-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

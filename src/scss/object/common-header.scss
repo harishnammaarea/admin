@@ -1,0 +1,14 @@
+@import "/src/scss/settings/variables.scss";
+
+.common-header-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  .common-header-profile-container {
+    .common-header-icon-btn {
+      background: none;
+    }
+  }
+}

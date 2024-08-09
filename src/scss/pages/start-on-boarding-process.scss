@@ -1,0 +1,35 @@
+@import "/src/scss/settings/mixins.scss";
+@import "/src/scss/settings/variables.scss";
+
+.start-on-boarding-process-page {
+  padding: 1rem;
+
+  .start-on-boarding-process-basic-details {
+    margin-top: 1rem;
+  }
+
+  .start-on-boarding-process-cover-photos-route-to-next-stage {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .start-on-boarding-process-menu-extras-route-to-next-stage {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    .start-on-boarding-process-menu-extras-route-to-next-stage-pagination {
+      .rs-pagination-btn {
+        color: $sidebar-color;
+      }
+
+      .rs-pagination-btn-active {
+       color: #ffffff;
+       background-color: $sidebar-color;
+       border: 1px solid $sidebar-color;
+      }
+    }
+  }
+}

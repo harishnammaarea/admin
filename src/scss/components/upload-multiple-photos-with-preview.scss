@@ -1,0 +1,49 @@
+@import "/src/scss/settings/mixins.scss";
+
+.upload-multiple-photos-with-preview-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  .upload-multiple-photos-uploaded-images-container {
+    position: relative;
+
+    .upload-multiple-photos-uploaded-images-container-cancel-icon-container {
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: #E3E5EA;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .upload-multiple-photos-uploaded-urls {
+      width: 15.2rem;
+      height: 15.2rem;
+      border-radius: 1rem;
+
+      @include mobile-only {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
+
+  .upload-multiple-photos-selected-images {
+    width: 15.2rem;
+    height: 15.2rem;
+    border-radius: 1rem;
+
+    @include mobile-only {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  .upload-multiple-photos-with-preview-input {
+    display: none;
+  }
+}

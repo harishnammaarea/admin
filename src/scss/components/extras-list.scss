@@ -1,0 +1,35 @@
+@import "/src/scss/settings/mixins.scss";
+
+.extras-list {
+  margin-top: 1rem;
+
+  .extras-list-add-extra-card {
+    height: calc(100vh - 25rem);
+
+    .rs-panel-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 25rem);
+    }
+  }
+
+  .extras-list-header {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .extras-list-extras-list-table {
+    margin-top: 1rem;
+    height: calc(100vh - 32rem);
+
+    .rs-table {
+      border-radius: 1rem !important;
+      .rs-table-scrollbar-vertical {
+        width: 0 !important;
+      }
+    }
+  }
+}

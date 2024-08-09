@@ -1,0 +1,11 @@
+export const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+export const urlRe = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
+export const htmlRegex = /<\/?[^>]+(>|$)/g;
+export const mobileNumberRegex = /^[\d]+$/;
+export const gstNoRegex = /^([0][1-9]|[1-2][0-9]|[3][0-7])([a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9a-zA-Z]{1}[zZ]{1}[0-9a-zA-Z]{1})+$/
+export const landlineRegex = /[0-9]\d{2,4}-\d{6,8}$/
+export const LATITUDE_REGEX = /-?([0-9]|[1-8][0-9])(\.\d{1,6})?|90(\.0{1,6})?/
+export const LONGITUDE_REGEX = /-?((0|[1-9][0-9]?|1[0-7][0-9])(\.\d{1,6})?|180(\.0{1,6})?)/
+export const IFSC_CODE = /^[A-Z]{4}0[A-Z0-9]{6}$/
+export const PAN_CARD_REGEX = /^[A-Z]{5}[0-9]{4}[A-Z]$/
+export const ISNUMBER_REGEX = /^[\d]+$/;

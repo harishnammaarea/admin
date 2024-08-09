@@ -1,0 +1,22 @@
+@import "/src/scss/settings/mixins.scss";
+
+.add-restaurant-location-details-form {
+  margin-top: 1rem;
+
+  .add-resturant-location-details-form-fields {
+    height: calc(100vh - 24rem);
+    overflow: scroll;
+    @include hide-scrollar;
+  }
+
+  .add-restauraant-location-details-submit-btn {
+    display: flex;
+    justify-content: flex-end;
+
+    @include mobile-only {
+      justify-content: center;
+    }
+
+    margin-top: 1rem;
+  }
+}

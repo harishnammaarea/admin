@@ -1,0 +1,42 @@
+@mixin font-light {
+  font-weight: 300;
+}
+
+@mixin font-regular {
+  font-weight: 400;
+}
+
+@mixin font-semi-bold {
+  font-weight: 600;
+}
+
+@mixin font-bold {
+  font-weight: 700;
+}
+
+@mixin mobile-only {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tab-only {
+  @media (min-width: 480px) and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin hide-scrollar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

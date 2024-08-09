@@ -1,0 +1,14 @@
+.add-menu-form {
+  .add-menu-form-add-menu-fields {
+    box-shadow: none;
+    .rs-panel-body {
+      padding: 0 !important;
+    }
+  }
+
+  .add-menu-form-save-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,22 @@
+@import "/src/scss/object/common.scss";
+
+.add-extra-container {
+  box-shadow: none !important;
+  .add-extra-grid {
+    .add-extra-row {
+      .add-extra-col {
+        margin-top: 1rem;
+
+        .add-extra-control-label {
+          @extend %form-label-common-styles;
+        }
+      }
+    }
+  }
+
+  .add-extra-save-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+}

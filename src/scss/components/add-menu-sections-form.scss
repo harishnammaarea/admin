@@ -1,0 +1,11 @@
+@import "/src/scss/settings//mixins.scss";
+
+.add-menu-sections-form-main-container {
+  margin-top: 1rem;
+
+  .add-menu-sections-form-fields {
+    height: calc(100vh - 25rem);
+    overflow: scroll;
+    @include hide-scrollar;
+  }
+}

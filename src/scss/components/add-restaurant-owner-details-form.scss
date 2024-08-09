@@ -1,0 +1,10 @@
+@import "/src/scss/settings/mixins.scss";
+
+.add-restaurant-owner-details-form-main-container {
+  .add-restaurant-owner-details-form-fields {
+    margin-top: 1rem;
+    height: calc(100vh - 25rem);
+    overflow: scroll;
+    @include hide-scrollar;
+  }
+}

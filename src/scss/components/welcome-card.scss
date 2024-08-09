@@ -1,0 +1,60 @@
+@import "/src/scss/settings/mixins.scss";
+
+.welcome-card-main-container {
+  .rs-panel-body {
+    display: flex;
+
+    @include mobile-only {
+      flex-direction: column;
+    }
+
+    gap: 1rem;
+
+    .welcome-card-left-container {
+      width: 100%;
+      @include desktop-only {
+        width: 80%;
+      }
+
+      .welcome-card-left-container-text-one {
+        font-size: 1.6rem;
+
+        @include mobile-only {
+          text-align: center;
+        }
+
+        span {
+          font-weight: 700;
+          margin-left: 0.5rem;
+        }
+      }
+
+      .welcome-card-left-container-text-two {
+        width: 100%;
+        text-align: center;
+
+        @include desktop-only {
+          width: 75%;
+          text-align: start;
+        }
+
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .welcome-card-action-btns-container {
+        display: flex;
+
+        @include mobile-only {
+          justify-content: center;
+        }
+      }
+    }
+
+    .welcome-card-right-container {
+      @include mobile-only {
+        text-align: center;
+      }
+    }
+  }
+}

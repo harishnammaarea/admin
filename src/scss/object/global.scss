@@ -1,0 +1,59 @@
+.rs-form-control {
+  width: 100%;
+}
+
+.rs-input-group,
+.rs-input-group-inside {
+  width: 100% !important;
+}
+
+.rs-form-group {
+  width: 100%;
+}
+
+.rs-input-group-focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.rs-picker-toggle-active {
+  box-shadow: none !important;
+}
+
+.rs-picker-toggle-value {
+  color: #000000 !important;
+}
+
+.rs-input {
+  color: #000000 !important;
+}
+
+.rs-picker-select-menu-item {
+  color: #000000 !important;
+  font-size: 1.4rem !important;
+}
+
+.rs-picker-toggle {
+  border-radius: 0.6rem !important;
+  border: none !important;
+}
+
+.rs-checkbox-checker {
+  font-size: 1.4rem !important;
+}
+
+.rs-table-cell {
+  width: 100% !important;
+}
+
+.rs-form-error-message-show {
+  font-weight: 500;
+}
+
+iframe#webpack-dev-server-client-overlay {
+  display: none !important;
+}
+
+.rs-grid-container-fluid {
+  padding: 0 !important;
+}

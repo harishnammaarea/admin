@@ -1,0 +1,71 @@
+//base
+@import "/src/scss/base/genaric.scss";
+@import "/src/scss/base/reset.scss";
+
+//settings
+@import "/src/scss/settings/mixins.scss";
+@import "/src/scss/settings/variables.scss";
+
+//object
+@import "/src/scss/object/layout.scss";
+@import "/src/scss/object/loader.scss";
+@import "/src/scss/object/common-header.scss";
+@import "/src/scss/object/global.scss";
+@import "/src/scss/object/common.scss";
+@import "/src/scss/object/table.scss";
+
+//pages
+@import "/src/scss/pages/login.scss";
+@import "/src/scss/pages/restaurants.scss";
+@import "/src/scss/pages/add-restaurant-basic-details.scss";
+@import "/src/scss/pages/add-menu.scss";
+@import "/src/scss/pages/overview.scss";
+@import "/src/scss/pages/view-restaurant.scss";
+@import "/src/scss/pages/edit-restaurant.scss";
+@import "/src/scss/pages/add-menu-sections.scss";
+@import "/src/scss/pages/onboarding.scss";
+@import "/src/scss/pages/start-on-boarding-process.scss";
+@import "/src/scss/pages/add-restaurant-location-details.scss";
+
+//components
+@import "/src/scss/components/start-on-boarding-process-progress-indicator.scss";
+@import "/src/scss/components/start-on-boarding-process-route-to-stage.scss";
+@import "/src/scss/components/add-restaurant-basic-details-fields.scss";
+@import "/src/scss/components/add-restaurant-owner-details-fields.scss";
+@import "/src/scss/components/add-restaurant-bank-details-form.scss";
+@import "/src/scss/components/add-restaurant-location-details-fields.scss";
+@import "/src/scss/components/add-restaurant-cover-photos.scss";
+@import "/src/scss/components/add-menu-form.scss";
+@import "/src/scss/components/add-menu-fields.scss";
+@import "/src/scss/components/add-extra.scss";
+@import "/src/scss/components/extras-list-table.scss";
+@import "/src/scss/components/restaurant-header.scss";
+@import "/src/scss/components/login-left-container.scss";
+@import "/src/scss/components/login-right-container.scss";
+@import "/src/scss/components/upload-multiple-photos-with-preview.scss";
+@import "/src/scss/components/upload-single-photo-with-preview.scss";
+@import "/src/scss/components/welcome-card.scss";
+@import "/src/scss/components/restaurant-list.scss";
+@import "/src/scss/components/add-opening-hours-form.scss";
+@import "/src/scss/components/add-opening-hours-fields.scss";
+@import "/src/scss/components/add-menu-sections-form.scss";
+@import "/src/scss/components/add-restaurant-location-details-form.scss";
+@import "/src/scss/components/start-on-boarding-process-card.scss";
+@import "/src/scss/components/add-restaurant-basic-details-form.scss";
+@import "/src/scss/components/add-restaurant-owner-details-form.scss";
+@import "/src/scss/components/add-restaurant-bank-details-fields.scss";
+@import "/src/scss/components/add-menu-sections-fields.scss";
+@import "/src/scss/components/count-card.scss";
+@import "/src/scss/components/extras-list.scss";
+@import "/src/scss/components/menu-list.scss";
+@import "/src/scss/components/menu-list-table.scss";
+@import "/src/scss/components/confirm-delete-modal.scss";
+
+//shared
+@import "/src/scss/shared/writiffy-button.scss";
+@import "/src/scss/shared/common-card.scss";
+@import "/src/scss/shared/common-modal.scss";
+@import "/src/scss/shared/common-pagination.scss";
+
+//cards
+@import "/src/scss/components/upload-image-card.scss";

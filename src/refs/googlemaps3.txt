@@ -1,0 +1,74 @@
+import clsx from "clsx";
+import { reduxForm, InjectedFormProps } from "redux-form";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import Button from "shared/components/Button";
+import React, { useState } from "react";
+import axios from "axios";
+
+interface AddRestaurantFormProps {
+  className?: string;
+}
+
+interface MyFormValuesprops { }
+
+type FinalProps = InjectedFormProps<AddRestaurantFormProps, MyFormValuesprops> &
+  AddRestaurantFormProps;
+
+function AddRestaurantForm({
+  className,
+  handleSubmit,
+  initialize,
+}: FinalProps) {
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: "AIzaSyB7LXBliP9xH-Y-Cj60iocPucVTa5dL4uo",
+  });
+
+  const [location, setLocation] = useState({ lat: 48.8584, lng: 2.2945 });
+  const [map, setMap] = React.useState(null);
+
+  function getCoords() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          setLocation({ lat: latitude, lng: longitude });
+          console.log("Latitude: " + latitude);
+          console.log("Longitude: " + longitude);
+        },
+        function (error) {
+          console.error("Error getting location: " + error.message);
+        }
+      );
+    } else {
+      console.log("Geolocation is not supported in this browser.");
+    }
+  }
+
+  async function getAddress() {
+    await axios
+      .get(
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.lat},${location.lng}&key=AIzaSyB7LXBliP9xH-Y-Cj60iocPucVTa5dL4uo`
+      )
+      .then((response) => {
+        if (response.data.results.length > 0) {
+          console.log(response);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching location details:", error);
+      });
+  }
+
+  return (
+    <div className={clsx("add-restaurant-form-container", className)}>
+     <h1>Basic Details</h1>
+    </div>
+  );
+}
+
+export default reduxForm<MyFormValuesprops, AddRestaurantFormProps>({
+  form: "AddResturantReduxForm",
+
+})(AddRestaurantForm);

@@ -1,0 +1,24 @@
+@import "/src/scss/settings/mixins.scss";
+
+.login-page-main-container {
+  @include desktop_only {
+    display: flex;
+  }
+  height: 100vh;
+
+  .login-page-login-left-container {
+    width: 50%;
+    height: 100vh;
+    background-image: url("../../assets/background/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface-min-min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .login-page-login-right-container {
+    @include desktop_only {
+      width: 50%;
+    }
+    height: 100vh;
+    padding: 1rem !important;
+  }
+}

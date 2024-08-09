@@ -1,0 +1,10 @@
+@import "/src/scss/settings/variables.scss";
+.desktop-back-button-wrapper {
+  width: 100%;
+  height: 50px;
+  padding: 10px 0 20px 0;
+
+  .desktop-back-icon-btn {
+    background-color: $color-body-background;
+  }
+}

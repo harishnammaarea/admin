@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

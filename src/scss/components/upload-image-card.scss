@@ -1,0 +1,18 @@
+@import "/src/scss/settings/variables.scss";
+@import "/src/scss/settings/mixins.scss";
+
+.upload-image-card {
+  width: 15rem;
+  box-shadow: none !important;
+  background-color: transparent;
+  border: 2px dashed $sidebar-color;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile-only {
+    width: 8rem;
+    height: 8rem;
+  }
+}
