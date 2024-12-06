@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { Menus } from 'core/models/restaurants';
+import { Menus } from 'core/models/menu';
 import { Table } from 'rsuite';
 
 interface MenuListTableProps {
@@ -14,7 +14,7 @@ export type MenuRow = {
 
 export default function MenuListTable({ className, menuList }: MenuListTableProps) {
   const { Column, HeaderCell, Cell } = Table;
-console.log(menuList)
+  
   return (
     <Table
       data={menuList}

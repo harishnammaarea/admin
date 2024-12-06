@@ -32,9 +32,9 @@ export default function Layout({ children }: LayoutProps) {
     <Container className="app-main-container">
       {isLoggedIn &&
         <>
-          <SideBar />
+            <SideBar />
           <div className="app-component-container">
-              <CommonHeader user={user} />
+            <CommonHeader user={user} />
             {children}
           </div>
         </>

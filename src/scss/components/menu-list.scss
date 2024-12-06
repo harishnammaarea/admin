@@ -6,10 +6,12 @@
     justify-content: flex-end;
   }
 
-  .menu-list-empty-card {
-    height: calc(100vh - 20rem);
+  .menu-list-empty-main-card {
+    height: calc(100vh - 10rem);
 
-    .rs-panel-body {
+    .menu-list-empty-inner-card {
+      height: calc(100vh - 20rem);
+
       display: flex;
       flex-direction: column;
       justify-content: center;

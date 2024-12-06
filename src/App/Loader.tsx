@@ -1,8 +1,9 @@
 import { Fragment } from 'react'
 import loaderIcon from '../assets/icons/loader.png'
-import { Store, useTypedSelector } from './Store'
+import {  useTypedSelector } from './Store'
 export default function Loader() {
-  const { isLoading } = useTypedSelector((state: Store) => state.loader)
+  const { isLoading } = useTypedSelector(state => state.loader)
+
   return (
     isLoading ?
       <div className="loader-wrapper">

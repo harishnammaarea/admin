@@ -1,0 +1,33 @@
+.create-menu-section-form-container {
+  .create-menu-section-form-container-grid {
+    .create-menu-section-form-container-grid-col {
+      margin-top: 1rem;
+    }
+  }
+
+  .create-menu-section-form-container-btn-container {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+  }
+
+  .create-menu-section-form-conatiner-sub-section-btn-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+  }
+
+  .create-menu-section-form-container-sub-section-tags-container {
+    min-height: 15rem;
+    border: 1px solid $input-border-color;
+    border-radius: 0.3rem;
+    margin-top: 1rem !important;
+  }
+
+  .create-menu-section-form-container-sub-section-btn-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}

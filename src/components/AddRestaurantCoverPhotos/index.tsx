@@ -17,6 +17,7 @@ export default function AddRestaurantCoverPhotos({ className, onImagesToUpload, 
   return (
     <CommonCard className={clsx("add-restaurant-cover-photos-container", className)}>
       <UploadMultiplePhotosWithPreview
+        max={5}
         urls={urls}
         onImagesToUpload={handleImagesToUpload}
       />

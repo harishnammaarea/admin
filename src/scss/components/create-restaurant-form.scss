@@ -1,0 +1,132 @@
+@import "/src/scss/settings/mixins.scss";
+
+.create-restaurant-form-card {
+  height: calc(100vh - 8rem);
+  overflow: scroll !important;
+  @include hide-scrollar;
+
+  .rs-panel-body {
+    .create-restaurant-form-main-photos-section {
+      .create-restaurnat-form-upload-logo-and-main-cover-photo-container {
+        .create-restaurnat-form-upload-logo-container {
+          width: fit-content;
+          position: relative;
+
+          .create-restaurant-form-upload-logo-remove-btn {
+            position: absolute;
+            top: -0.5rem;
+            right: -0.5rem;
+            border: 2px solid $sidebar-color;
+          }
+
+          .create-restaurant-form-uploaded-logo {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 1rem;
+
+            @include desktop-only {
+              width: 15rem;
+              height: 15rem;
+            }
+          }
+        }
+
+        .create-restaurant-form-upload-logo-input {
+          display: none;
+        }
+      }
+
+      .create-restaurnat-form-upload-main-cover-photo-container {
+        width: 100%;
+
+        .create-restaurant-form-upload-main-cover-photo-input {
+          display: none;
+        }
+
+        .create-restaurant-form-upload-main-cover-photo-img-container {
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 30rem;
+            border-radius: 1rem;
+          }
+
+          .create-restaurant-form-upload-main-cover-photo-remove-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            border: 2px solid $sidebar-color;
+          }
+        }
+
+        .create-restaurant-form-main-cover-photo-upload-image-card {
+          width: 100%;
+          height: 30rem;
+        }
+      }
+    }
+
+    .create-restaurant-form-upload-cover-photos {
+      margin-top: 2rem;
+    }
+
+    .create-restaurant-form-container {
+      margin-top: 2rem;
+
+      h3 {
+        margin-bottom: 0;
+      }
+
+      .create-restaurant-grid-row {
+        margin-top: 0;
+
+        @include desktop-only {
+          margin-top: 1rem;
+        }
+
+        .create-restaurant-form-grid-col {
+          margin-top: 1rem;
+
+          @include desktop-only {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .create-restaurant-form-btns-container {
+        display: flex;
+        justify-content: end;
+        margin-top: 1rem;
+        gap: 1rem;
+      }
+    }
+
+    .create-restaurant-form-added-cover-photos-container {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      .create-restaurant-form-added-cover-photos-container {
+        position: relative;
+
+        .create-restaurant-form-added-cover-photo {
+          width: 100%;
+
+          @include desktop-only {
+            width: 150px;
+            height: 150px;
+            border-radius: 1rem;
+          }
+        }
+
+        .create-restaurant-form-added-cover-photos-cancel {
+          position: absolute;
+          top:0.5rem;
+          right: 0.5rem;
+          border: 2px solid $sidebar-color; 
+        }
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@ export default function LandingPage() {
   function checkUserIsLoggedIn() {
     const token = getDecodedToken()
     if (token) {
-      history.push("/overview")
+      history.replace("/overview")
     }
     else {
       history.push("/login")

@@ -1,3 +1,21 @@
+@import "/src/scss/settings/variables.scss";
+
 .restaurant-list-table-container {
   border-radius: 1rem;
+  box-shadow: $card-box-shadow ;
+
+  .restaurant-list-table-logo-container {
+    width: 40;
+    height: 40;
+    background: #f5f5f5;
+    border-radius: 0.5rem;
+    margin-top: 5px;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .restaurant-list-table-add-menu-items-link {
+    text-decoration: underline;
+    color: $sidebar-color;
+  }
 }

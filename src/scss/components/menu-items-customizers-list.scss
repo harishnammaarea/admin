@@ -1,0 +1,18 @@
+.menu-items-customizer-common-combos-header-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-items-customizers-common-combos-table {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  box-shadow: $card-box-shadow;
+
+  .menu-items-customizers-common-combos-table-view {
+    color: $sidebar-color;
+    text-decoration: underline;
+  }
+}
+ 

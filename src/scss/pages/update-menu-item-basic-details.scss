@@ -1,0 +1,9 @@
+.update-menu-item-page {
+  padding: 1rem;
+
+  .update-menu-item-page-common-card {
+    height:calc(100vh - 10rem);
+    overflow: scroll;
+    @include hide-scrollar
+  }
+}

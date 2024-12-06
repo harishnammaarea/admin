@@ -1,5 +1,5 @@
 import { SelectOptions } from "core/models/Options"
-import { InputPicker, Placeholder } from "rsuite"
+import { InputPicker } from "rsuite"
 import FormControl from "rsuite/esm/FormControl"
 import FormControlLabel from "rsuite/esm/FormControlLabel"
 import FormGroup from "rsuite/esm/FormGroup"

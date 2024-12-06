@@ -2,7 +2,7 @@ import { handleError } from "core/helpers/HandleError";
 import { handleResponse } from "core/helpers/HanldeResponse";
 import { AuthHttpClient } from "core/helpers/HttpClient";
 
-export function uploadSingleFile(files: FormData) {
+export function uploadSingleFileApi(files: FormData) {
   const headers = {
     contentType: "multipart/form-data"
   }
@@ -12,12 +12,12 @@ export function uploadSingleFile(files: FormData) {
     .catch(handleError)
 }
 
-export function uploadMultiplefiles(files: FormData) {
+export function uploadfilesApi(files: FormData) {
   const headers = {
     contentType: "multipart/form-data"
   }
   return AuthHttpClient
-    .post("/core/uploadMultipleFiles", files, { headers })
+    .post("/core/uploadFiles", files, { headers })
     .then(handleResponse)
     .catch(handleError)
 }

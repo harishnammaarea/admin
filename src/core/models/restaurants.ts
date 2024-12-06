@@ -1,3 +1,5 @@
+import { MenuItemsCustomizer, MenuSection } from "./menu"
+
 export type RestaurantType = "Vegeterian" | "Non-vegeterian" | "Both"
 
 export type ContactNumberType = "Mobile number" | "Landline number"
@@ -7,47 +9,32 @@ export interface RestaurantDetails {
   name: string,
   category: RestaurantType,
   contactNumber: string,
-  contactNumberType: ContactNumberType,
-  alternateContactNumber: string,
-  alternateContactNumberType: ContactNumberType,
-  email: string,
-  openingTime: string,
-  closingTime: string,
-  closedOn: string,
-  gstNo: string,
-  cuisines: string,
-  logo: string | null,
-  verified: boolean,
-  fssaiNumber: string,
-  locationDetails: LocationDetails,
-  ownerDetails: OwnerDetails,
-  bankDetails: BankDetails,
-  menuSections: MenuSections[],
-  mainCourses: string,
-  openingHours: OpeningHours[],
-  coverPhotos: CoverPhotos[]
+  logo: string
+  email: string
 }
 
-export interface BasicDetails {
-  id?: string | number,
+export interface Restaurants {
+  _id: string,
   name: string,
   category: RestaurantType,
-  contactNumber: string,
-  contactNumberType: ContactNumberType,
-  alternateContactNumber: string,
-  alternateContactNumberType: ContactNumberType,
-  email: string,
-  openingTime: string,
-  closingTime: string,
-  closedOn: string,
-  gstNo: string,
-  cuisines: string,
-  logo: string | null,
-  verified: boolean,
-  fssaiNumber: string,
-  city: string
-  state: string
-  mainCourses: string
+  mobileNumber: string,
+  logo: string
+  email: string
+  count: number,
+  ouletCount: number
+  mainCoverPhoto: string
+  createdAt: string
+  businessModel: string
+  cuisines: Cuisine[] 
+  coverPhotos: string[]
+  menuCount: number
+  menuSections:MenuSection
+  customizers:MenuItemsCustomizer[]
+}
+
+export interface Cuisine {
+  _id: string
+  name: string
 }
 
 export interface CoverPhotos {
@@ -59,11 +46,6 @@ export interface OpeningHours {
   openingTime: string,
   closingTime: string,
   appliedDays: string
-}
-
-export interface MenuSections {
-  id: number | string,
-  name: string,
 }
 
 export interface BankDetails {
@@ -104,7 +86,7 @@ export interface OwnerDetails {
 }
 
 export interface Extras {
-  id:number
+  id: number
   name: string,
   price: number,
   quantity: string,
@@ -116,38 +98,4 @@ export interface MainCourses {
   name: string
   url: string
   id: number
-}
-
-export type MenuCategory = Omit<RestaurantType, "Both">
-
-export type MenuPhotoUrls = {
-  id: number,
-  url: string
-}
-
-export type MenuItemAvailabeHours = {
-  id: number,
-  startTime: string,
-  endTime: string
-}
-
-export type MenuItemExtras = {
-  id: number,
-  name: string,
-  price: number,
-  quantity: string,
-  category: MenuCategory
-}
-
-export interface Menus {
-  id: number,
-  name: string,
-  category: MenuCategory,
-  description: string,
-  ingredients: string,
-  price: number,
-  cuisine: string | null,
-  menuPhotoUrls: MenuPhotoUrls[],
-  menuItemAvailabeHours: MenuItemAvailabeHours[],
-  menuItemExtras: MenuItemExtras[]
 }

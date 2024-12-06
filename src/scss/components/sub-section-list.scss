@@ -1,0 +1,16 @@
+.sub-section-list-create-wrapper {
+  .sub-sections-list-table {
+    border-radius: 1rem;
+
+    .sub-section-list-update {
+      color: $sidebar-color;
+      text-decoration: underline;
+    }
+  }
+
+  .sub-section-list-create-btn-container {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1rem;
+  }
+}

@@ -10,10 +10,11 @@ interface CommonCardProps {
   shaded?: boolean
   collapsible?: boolean
   header?: string
-  onClick?():void
+  onClick?(): void
+  innerContainerClassName?: string
 }
 
-export default function CommonCard({ className, header = "", children, bodyFill = false, borderd = false, shaded = true, collapsible = false,onClick }: CommonCardProps) {
+export default function CommonCard({ className, innerContainerClassName, header = "", children, bodyFill = false, borderd = false, shaded = true, collapsible = false, onClick }: CommonCardProps) {
   return (
     <Panel className={clsx("common-card-main-container", className)}
       bodyFill={bodyFill}
@@ -23,7 +24,9 @@ export default function CommonCard({ className, header = "", children, bodyFill 
       header={header}
       onClick={onClick}
     >
-      {children}
+      <div className={innerContainerClassName}>
+        {children}
+      </div>
     </Panel>
   )
 }

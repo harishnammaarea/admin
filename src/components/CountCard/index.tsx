@@ -1,15 +1,16 @@
 import clsx from "clsx";
+import { ReactNode } from "react";
 import CommonCard from "shared/components/CommonCard";
 
 interface CountCardProps {
   className?: string
-  title: string
+  children: ReactNode
 }
 
-export default function CountCard({ className, title }: CountCardProps) {
+export default function CountCard({ className, children }: CountCardProps) {
   return (
-    <CommonCard className={clsx("count-card", className)}>
-      <h1>{title}</h1>
+    <CommonCard className={clsx("count-card-container", className)}>
+      {children}
     </CommonCard>
   )
 }  

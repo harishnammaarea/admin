@@ -1,4 +1,6 @@
-import { FC, ReactNode } from "react";
+import clsx from "clsx";
+import {  FC, ReactNode } from "react";
+import { FieldRenderProps } from "react-final-form";
 import { Input, InputGroup } from "rsuite";
 import FormControl from "rsuite/esm/FormControl";
 import FormControlLabel from "rsuite/esm/FormControlLabel";
@@ -23,7 +25,7 @@ interface ComponentProps {
   formControlLabelClassName?: string;
   type?: "text" | "time";
   defaultValue?: string;
-  onClickIcon?():void
+  onClickIcon?(): void
 }
 
 const CustomInput: FC<ComponentProps> = ({
@@ -35,7 +37,7 @@ const CustomInput: FC<ComponentProps> = ({
 }) => {
   return (
     <Input
-      style={{ outline: "none" }}
+      style={{ width: "100%" }}
       placeholder={placeholder}
       disabled={disabled}
       {...input}
@@ -46,7 +48,8 @@ const CustomInput: FC<ComponentProps> = ({
   );
 };
 
-const InputWithLabel: FC<ComponentProps> = ({
+
+const InputWithLabel: FC<FieldRenderProps<string> & ComponentProps> = ({
   formGroupClassName,
   label,
   input,
@@ -60,17 +63,32 @@ const InputWithLabel: FC<ComponentProps> = ({
   defaultValue = "",
   formControlLabelClassName,
   onClickIcon
-  
+
 }) => {
   if (defaultValue) {
     input.value = defaultValue;
   }
   return (
     <FormGroup className={formGroupClassName}>
-      <FormControlLabel className={formControlLabelClassName}>
+      <FormControlLabel className={clsx(formControlLabelClassName, "common-form-label")}>
         {label}
       </FormControlLabel>
       <InputGroup inside>
+        {icon && (
+          <InputGroup.Addon
+            style={{
+              backgroundColor: "#ffffff",
+              color: "#5449f0",
+              fontWeight: "600",
+              cursor: "pointer",
+              borderTopRightRadius: "6px",
+              borderBottomRightRadius: "6px"
+            }}
+            onClick={onClickIcon}
+          >
+            {icon && icon}
+          </InputGroup.Addon>
+        )}
         <FormControl
           name="input"
           accepter={CustomInput}
@@ -83,21 +101,6 @@ const InputWithLabel: FC<ComponentProps> = ({
           type={type}
           defaultValue={defaultValue}
         />
-        {icon && (
-          <InputGroup.Addon
-            style={{
-              background: "#E3E5EA",
-              color: "#5449f0",
-              fontWeight: "600",
-              cursor:"pointer",
-              borderTopRightRadius:"6px",
-              borderBottomRightRadius:"6px"
-            }}
-            onClick={onClickIcon}
-          >
-            {icon && icon}
-          </InputGroup.Addon>
-        )}
       </InputGroup>
       {helperText && <FormHelpText>{helperText}</FormHelpText>}
     </FormGroup>

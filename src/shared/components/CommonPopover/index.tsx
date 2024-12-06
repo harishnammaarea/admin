@@ -32,26 +32,28 @@ interface CommonPopoverProps {
   popOverClassName?: string
 }
 
-export default function CommonPopover({ className,
+export default function CommonPopover({ 
+  className,
   children,
   placement = "bottom",
   trigger = "click",
   popOverClassName,
   popOverContent
 }: CommonPopoverProps) {
-  return (<Whisper
-    className={className}
-    trigger={trigger}
-    placement={placement}
-    preventOverflow={true}
-    speaker={
-      <Popover className={popOverClassName}>
-        {popOverContent}
-      </Popover>
-    }
-  >
-    {children}
-  </Whisper>
+  return (
+    <Whisper
+      className={className}
+      trigger={trigger}
+      placement={placement}
+      preventOverflow={true}
+      speaker={
+        <Popover className={popOverClassName}>
+          {popOverContent}
+        </Popover>
+      }
+    >
+      {children}
+    </Whisper>
   )
 
 }

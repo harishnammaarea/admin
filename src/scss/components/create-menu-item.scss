@@ -1,0 +1,62 @@
+
+.create-menu-item-update-mode-upload-photos-container {
+  padding: 1rem;
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  .create-menu-item-update-mode-single-photo-container {
+    position: relative;
+    width: fit-content;
+
+    .create-menu-item-update-mode-img {
+      border-radius: 0.5rem;
+    }
+
+    .create-menu-item-update-mode-upload-mode-selected-to-remove {
+      position: absolute;
+      right: -1rem;
+      top: -1rem;
+      height: fit-content;
+      border: 2px solid $sidebar-color;
+    }
+  }
+}
+
+.create-menu-item-main-container {
+  height: calc(100vh - 8rem);
+  overflow: scroll !important;
+
+  .create-menu-item-main-title {
+    color: $sidebar-color;
+  }
+
+  .add-menu-item-menu-section {
+    .create-menu-item-form-save-btn-container {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  .create-menu-item-form-create-menu-item-btn-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+  }
+
+  .add-menu-item-menu-section-back-container {
+    svg {
+      path {
+        stroke: $sidebar-color !important;
+      }
+    }
+  }
+
+  .add-menu-sections-table {
+    .add-menu-sections-remove-menu-item-cell {
+      text-decoration: underline;
+      color: $sidebar-color;
+    }
+  }
+}

@@ -12,3 +12,6 @@ export function numberFormatter(num: number, digits: number) {
     return item ? (num / item.value).toFixed(digits).replace(rx, '$1') + item.symbol : '0'
 }
 
+export function commasFormatter(number:number) {
+   return number.toLocaleString('en-us')
+}

@@ -1,0 +1,49 @@
+@import "/src/scss/settings/variables.scss";
+@import "/src/scss/settings/mixins.scss";
+
+.add-area-admin-general-details-form-container {
+  .add-area-admin-general-details-common-card {
+    margin-top: 1rem;
+    height: calc(100vh - 25rem);
+    overflow: scroll;
+    @include hide-scrollar;
+
+    .add-area-admin-general-details-add-profile-pic-container {
+      width: fit-content;
+      position: relative;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .add-area-admin-general-details-add-profile-pic-icon-btn {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        border: 2px solid $sidebar-color;
+        cursor: pointer;
+      }
+
+      .add-area-admin-general-details-add-profile-pic-input {
+        display: none;
+      }
+    }
+
+    .add-area-admin-general-details-form-grid {
+      margin-top: 1rem;
+      .add-area-admin-general-details-form-grid-row {
+        @include desktop-only {
+          margin-top: 1rem;
+        }
+
+        .add-area-admin-general-details-form-col-grid {
+          margin-top: 1rem;
+
+          @include desktop-only {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,0 @@
-@import "/src/scss/settings/mixins.scss";
-
-.add-restaurant-basic-details-form-container {
-  .add-restaurant-basic-details-form-container-basic-details-fields {
-    height: calc(100vh - 25rem);
-    overflow: scroll;
-    @include hide-scrollar;
-  }
-}

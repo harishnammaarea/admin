@@ -1,0 +1,12 @@
+.view-all-menu-items-page {
+  padding: 1rem;
+
+  .view-all-menu-items-pagination {
+    display: flex;
+    justify-content: center;
+
+    @include desktop-only {
+      justify-content: end;
+    }
+  }
+}

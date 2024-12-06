@@ -1,7 +1,7 @@
 @import "/src/scss/settings/mixins.scss";
 
 .welcome-card-main-container {
-  .rs-panel-body {
+  .welocome-card-inner-container {
     display: flex;
 
     @include mobile-only {
@@ -44,9 +44,12 @@
 
       .welcome-card-action-btns-container {
         display: flex;
+        gap:1rem;
 
         @include mobile-only {
+          flex-direction: column;
           justify-content: center;
+          align-items: center;
         }
       }
     }

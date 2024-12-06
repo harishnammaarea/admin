@@ -1,3 +1,13 @@
 .overview-page {
   padding: 1rem;
+
+  .overview-analaytics-container {
+    .overview-analytics-total-card {
+      .rs-panel-body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
 }

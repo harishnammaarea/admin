@@ -1,2 +1,14 @@
 .restaurants-page-container {
+  padding: 1rem;
+
+  .restaurant-page-grid-container {
+    h2 {
+      overflow: visible;
+      word-wrap: break-word;
+    }
+  }
+
+  .restaurant-page-restaurant-list {
+    margin-top: 1rem;
+  }
 }

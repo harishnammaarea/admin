@@ -2,9 +2,18 @@
 
 .common-header-wrapper {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  padding: 0 0.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 1rem  1rem 0 1rem;
+  background-color: #ffffff;
+
+  .common-header-left-container {
+    .common-header-left-container-back-icon {
+      background: none !important;
+    }
+  }
 
   .common-header-profile-container {
     .common-header-icon-btn {

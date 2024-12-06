@@ -3,7 +3,7 @@ import { CONFIG } from "core/config";
 import { getToken } from "./storage";
 
 const AuthHttpClient = axios.create({
-  baseURL: `${CONFIG.baseUrl}`,
+  baseURL: `${CONFIG.baseUrlAdmin}`,
 });
 
 AuthHttpClient.interceptors.request.use(

@@ -1,0 +1,12 @@
+.add-area-admin-form-btns-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  .add-area-admin-form-btn {
+    @include desktop-only {
+      width: 15rem !important;
+    }
+  }
+}

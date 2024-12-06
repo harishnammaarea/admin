@@ -9,7 +9,7 @@ export function getUserName() {
     const { name } = token;
     return name;
   }
-  
+
   return "";
 }
 
@@ -28,7 +28,8 @@ export function getRole() {
     const { role } = token;
     return role;
   }
-  return "";
+
+  return null;
 }
 
 export function getName() {

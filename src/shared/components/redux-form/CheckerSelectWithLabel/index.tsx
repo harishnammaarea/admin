@@ -1,5 +1,7 @@
+import clsx from "clsx";
 import { SelectOptions } from "core/models/Options";
 import { FC } from "react";
+import { FieldRenderProps } from "react-final-form";
 import { CheckPicker, InputGroup } from "rsuite";
 import FormControl from "rsuite/esm/FormControl";
 import FormControlLabel from "rsuite/esm/FormControlLabel";
@@ -19,7 +21,7 @@ interface ComponentProps {
   meta?: Meta
   cleanable?: boolean
   searchable?: boolean
-  data: SelectOptions[] | []
+  options: SelectOptions[]
 }
 
 interface Meta {
@@ -28,11 +30,11 @@ interface Meta {
 }
 
 
-const CustomCheckerPicker: FC<ComponentProps> = ({ input, data, disabled, readOnly, size, placeholder, cleanable, searchable }) => {
+const CustomCheckerPicker: FC<ComponentProps> = ({ input, options, disabled, readOnly, size, placeholder, cleanable, searchable }) => {
   return (
     <CheckPicker
       {...input}
-      data={data}
+      data={options}
       placeholder={placeholder}
       readOnly={readOnly}
       disabled={disabled}
@@ -45,7 +47,8 @@ const CustomCheckerPicker: FC<ComponentProps> = ({ input, data, disabled, readOn
     />)
 }
 
-const CheckerSelectWithLabel: FC<ComponentProps> = ({ className,
+const CheckerSelectWithLabel: FC<FieldRenderProps<[]> & ComponentProps> = ({
+  className,
   formControlLabelClassName,
   label,
   disabled = false,
@@ -57,16 +60,13 @@ const CheckerSelectWithLabel: FC<ComponentProps> = ({ className,
   meta,
   cleanable = true,
   searchable = false,
-  data = []
+  options = []
 }) => {
-
-  if (!input.value) {
-    input.value = []
-  }
-
   return (
     <FormGroup>
-      <FormControlLabel className={formControlLabelClassName}>{label}</FormControlLabel>
+      <FormControlLabel className={clsx(formControlLabelClassName, "common-form-label")}>
+        {label}
+      </FormControlLabel>
       <InputGroup inside>
         <FormControl
           style={{ width: "100%" }}
@@ -81,7 +81,7 @@ const CheckerSelectWithLabel: FC<ComponentProps> = ({ className,
           className={className}
           cleanable={cleanable}
           searchable={searchable}
-          data={data}
+          options={options}
         />
         {helperText && <FormHelpText>{helperText}</FormHelpText>}
       </InputGroup>

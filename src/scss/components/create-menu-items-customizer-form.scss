@@ -1,0 +1,39 @@
+.create-menu-items-customizer-form-container {
+  .create-menu-items-customizer-form-save-btn-container {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+  }
+}
+
+.create-menu-items-customizer-form-options-form {
+  .create-menu-items-customizer-form-options-form-grid-row {
+    @include desktop-only {
+      margin-top: 1rem;
+    }
+  }
+
+  .create-menu-items-customizer-form-options-form-btn-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+  }
+}
+
+.create-menu-items-customizer-form-options-next-form-btn-container,
+.create-menu-items-customizer-form-options-create-form-btn-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.create-menu-items-customizer-mots-form {
+  .create-menu-items-customizer-mots-form-btn-container {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}

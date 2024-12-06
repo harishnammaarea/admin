@@ -1,0 +1,20 @@
+.menu-items-page {
+  padding: 1rem;
+
+  .menu-items-view-all-link-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+    
+    a {
+      font-weight: 600;
+      color: $sidebar-color;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.menu-items-page-create-menu-item-modal-body {
+  overflow: scroll;
+}

@@ -1,0 +1,40 @@
+@import "/src/scss/settings/variables.scss";
+
+.step-progress-bar-wrapper {
+  .rs-panel-body {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .step-progress-bar-step-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .step-progress-bar-count-active {
+      background-color: $sidebar-color !important;
+    }
+
+    .step-progress-bar-count-container {
+      padding: 0.3rem 0.6rem;
+      border-radius: 50%;
+      background-color: $divider-color;
+      color: $primary-white;
+    }
+
+    .step-progress-bar-title-active {
+      color:$sidebar-color !important;
+    }
+
+    .step-progress-bar-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $divider-color;
+    }
+
+    .step-progress-bar-divider {
+      width: 5rem;
+      padding: 0.1rem;
+    }
+  }
+}

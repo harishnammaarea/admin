@@ -1,0 +1,85 @@
+.restaurant-info-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop-only {
+    justify-content: space-between;
+    align-items: normal;
+    flex-direction: row;
+  }
+
+  .restaurant-info-card-basic-info-container {
+    text-align: center;
+
+    @include desktop-only {
+      text-align: start;
+    }
+
+    h1 {
+      color: #5449f0;
+    }
+
+    .restaurant-info-card-basic-info-other-details {
+      .restaurant-info-card-basic-info-span {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: end;
+        color: $text-grey-dark;
+
+        @include desktop-only {
+          align-items: end;
+          justify-content: flex-start;
+        }
+
+        .restaurant-info-card-basic-info-timestage-icon {
+          @include desktop-only {
+            position: relative;
+            top: 0.4rem;
+          }
+        }
+
+        .restaurant-info-card-basic-info-star {
+          padding: 0 0.4rem;
+          position: relative;
+          top: 0.3rem;
+        }
+      }
+    }
+
+    .restaurant-info-card-basic-info-btns-container {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      
+      @include desktop-only {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .restaurant-info-card-logo-container {
+    width: fit-content;
+    position: relative;
+
+    .restaurant-info-card-logo {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 1rem;
+    }
+
+    .restaurant-info-card-logo-icon {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background-color: $primary-white !important;
+      padding: 0.5rem !important;
+    }
+
+    .restaurant-info-card-input {
+      display: none;
+    }
+  }
+}

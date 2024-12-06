@@ -1,2 +1,12 @@
 .common-pagination {
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.rs-pagination-btn {
+}
+
+.rs-pagination-btn-active {
+  border: 1px solid $sidebar-color !important;
+  color: $sidebar-color !important;
 }

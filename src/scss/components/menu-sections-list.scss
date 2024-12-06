@@ -1,0 +1,18 @@
+.menu-sections-list-container {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  box-shadow: $card-box-shadow;
+
+  .menu-sections-list-sub-section-view,
+  .menu-sections-list-sub-section-add,
+  .menu-sections-list-section-update-menu-section {
+    text-decoration: underline;
+    color: $sidebar-color;
+  }
+
+  .menu-sections-list-sub-section-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

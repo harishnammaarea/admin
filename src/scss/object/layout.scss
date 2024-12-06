@@ -18,6 +18,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding: 0 1rem;
 
   &::-webkit-scrollbar {
     display: none;
@@ -43,11 +44,13 @@
   .rs-sidenav-item {
     font-size: 1.2rem !important;
     font-weight: 600;
+    color: #ffffff !important;
 
     &:hover {
       background: $sidebar-onhover-color !important;
       color: $sidebar-onhover-text-color !important;
       transition: all 1s;
+      border-radius: 5px;
 
       .rs-sidenav-item-icon {
         fill: $sidebar-active-text-color;
@@ -63,7 +66,8 @@
 
     &.active {
       background-color: $color-body-background;
-      color: $sidebar-color;
+      color: $sidebar-color !important;
+      border-radius: 5px;
 
       .rs-sidenav-item-icon {
         fill: $sidebar-active-text-color;

@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { FC } from "react";
 import { DatePicker as DatePickerInput, InputGroup } from "rsuite";
 import FormControl from "rsuite/esm/FormControl";
@@ -64,11 +65,9 @@ const DatePickerWithLable: FC<ComponentProps> = ({
     input.value = null
   }
 
-
-
   return (
     <FormGroup>
-      <FormControlLabel className={formControlLabelClassname}>{label}</FormControlLabel>
+      <FormControlLabel className={clsx(formControlLabelClassname,"common-form-label")}>{label}</FormControlLabel>
       <InputGroup inside>
         <FormControl
           name="datePicker"

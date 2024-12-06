@@ -36,6 +36,7 @@ export default function CommonModal({
   return (
     <Modal open={openModal}
       size={size}
+      backdrop={false}
       overflow={overflow}
       onClose={handleOnClose}
       className={clsx("modal-main-container", className)}>

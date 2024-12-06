@@ -1,24 +1,36 @@
 @import "/src/scss/settings/mixins.scss";
 
 .login-page-main-container {
-  @include desktop_only {
-    display: flex;
-  }
+  padding: 1rem;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  .login-page-login-left-container {
-    width: 50%;
-    height: 100vh;
-    background-image: url("../../assets/background/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface-min-min.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+  @include desktop-only {
+    padding: 0;
   }
 
-  .login-page-login-right-container {
-    @include desktop_only {
-      width: 50%;
-    }
-    height: 100vh;
-    padding: 1rem !important;
+  @include tab-only {
+    padding: 3rem;
+  }
+}
+
+.login-page-main-container-bg-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/background/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface-min-min.jpg");
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  position: fixed;
+
+  @include desktop-only {
+    display: none;
   }
 }

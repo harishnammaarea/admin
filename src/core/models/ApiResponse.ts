@@ -3,7 +3,8 @@ import Option, { SelectOptions } from "./Options";
 import { Contest } from "./Contest";
 import { Judge } from "./Judges";
 import { Stories } from "./stories";
-import { Extras, MainCourses, Menus, RestaurantDetails } from "./restaurants";
+import { Cuisine, Extras, MainCourses, RestaurantDetails, Restaurants } from "./restaurants";
+import {  MenuItem, MenuItemsCustomizer, Menus, MenuSection } from "./menu";
 
 export interface ResponseData {
     count: number,
@@ -26,7 +27,6 @@ export interface ResponseData {
     stories: Stories[]
     isLive: boolean
     contest: Contest
-    restaurantDetails: RestaurantDetails
     areas: SelectOptions[]
     urls: string[]
     mainCourses: MainCourses[]
@@ -34,8 +34,17 @@ export interface ResponseData {
     allCuisines: string[]
     states: SelectOptions[]
     restaurantId:number
-    menu:Menus[]
+    menuItems:Menus
+    menuItem:MenuItem
     extras:Extras[]
+    cuisines:Cuisine[]
+    restaurants:Restaurants[]
+    restaurant:Restaurants
+    menuSections:MenuSection
+    menuSection:MenuSection
+    menuItemsCount:number
+    customizers:MenuItemsCustomizer[]
+    customizerTypes:SelectOptions[]
 }
 
 export interface ApiResponse {

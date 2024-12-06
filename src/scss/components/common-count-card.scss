@@ -1,0 +1,19 @@
+.common-count-card-common-card {
+  margin-top: 1rem;
+
+  .common-count-card-container {
+    .common-count-card-icon {
+      position: relative;
+      right: 3px;
+
+      path {
+        fill: $sidebar-color;
+      }
+    }
+
+    h2 {
+      position: relative;
+      left: 3px;
+    }
+  }
+}

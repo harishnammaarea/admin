@@ -1,0 +1,11 @@
+@import "/src/scss/settings/variables.scss";
+
+.rs-radio-tile-mark  {
+  background-color: $sidebar-color !important;
+}
+
+.namma-area-radio-title {
+  &:hover {
+    border-color: $sidebar-color !important;
+  }
+}

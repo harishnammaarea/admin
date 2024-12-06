@@ -1,5 +1,7 @@
+import clsx from "clsx"
 import { SelectOptions } from "core/models/Options"
-import { FC, useState } from "react"
+import { FC } from "react"
+import { FieldRenderProps } from "react-final-form"
 import { TagPicker } from "rsuite"
 import FormControl from "rsuite/esm/FormControl"
 import FormControlLabel from "rsuite/esm/FormControlLabel"
@@ -12,7 +14,7 @@ interface Meta {
 }
 
 interface ComponentProps {
-  data: SelectOptions[],
+  options: SelectOptions[],
   label?: string,
   size?: "lg" | "md" | "sm" | "xs",
   placeholder?: string,
@@ -23,50 +25,66 @@ interface ComponentProps {
   meta?: Meta
   formGroupClassName?: string
   formControlLabelClassName?: string
+  placement?:
+  | "bottomStart"
+  | "bottomEnd"
+  | "topStart"
+  | "topEnd"
+  | "leftStart"
+  | "leftEnd"
+  | "rightStart"
+  | "rightEnd"
+  | "auto"
+  | "autoVerticalStart"
+  | "autoVerticalEnd"
+  | "autoHorizontalStart"
+  | 'autoHorizontalEnd';
 }
 
-const CustomTagPicker: FC<ComponentProps> = ({ data, size, placeholder, disabled, input, className }) => {
-  const [selectedValues, setSelectedValues] = useState([])
-  input.value = [...selectedValues]
+const CustomTagPicker: FC<ComponentProps> = ({ options, placement, size, placeholder, disabled, input, className }) => {
+
   return (
     <TagPicker
       {...input}
       block
-      data={data}
+      data={options}
       style={{ width: "100%", border: "1px solid #e5e5ea", borderRadius: "0.6rem" }}
       size={size}
       placeholder={placeholder}
       disabled={disabled}
       className={className}
       preventOverflow={true}
-      onChange={(value) => { setSelectedValues(value) }}
+      placement={placement}
     />
   )
 }
 
-const TagPickerWithlabel: FC<ComponentProps> = ({
+const TagPickerWithlabel: FC<FieldRenderProps<string | number[]> & ComponentProps> = ({
   formControlLabelClassName,
-  data = [],
-  label, size = "md",
+  options = [],
+  label = "",
+  size = "md",
   placeholder = "",
   input,
   disabled,
   helperText = "",
   className,
   meta,
+  placement = "autoVerticalStart",
   formGroupClassName }) => {
 
   return (
     <FormGroup className={formGroupClassName}>
-      <FormControlLabel className={formControlLabelClassName}>{label}</FormControlLabel>
+      <FormControlLabel className={clsx(formControlLabelClassName, "common-form-label")}>{label}</FormControlLabel>
       <FormControl
         name="select"
         size={size}
         accepter={CustomTagPicker}
-        data={data}
+        options={options}
         placeholder={placeholder}
         disabled={disabled}
         input={input}
+        placement={placement}
         className={className}
         errorMessage={meta?.touched && meta?.error}
       />
