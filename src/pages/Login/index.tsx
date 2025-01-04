@@ -27,6 +27,7 @@ export default function Login() {
     <>
       <div className="login-page-main-container-bg-image"></div>
       <div className="login-page-main-container">
+        <LoginContainer onLogin={handleOnLogin} />
       </div>
     </>
   )

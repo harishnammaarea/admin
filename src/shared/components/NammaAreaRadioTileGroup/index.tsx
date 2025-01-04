@@ -8,15 +8,27 @@ interface NammaAreaRadioTileProps {
   label: string,
   message?: string
   icon?: ReactNode
+  disabled?: boolean
   inline?: boolean
   value: string | number
+  checked?: boolean
+  defaultChecked?: boolean
 }
 
-export default function NammaAreaRadioTile({ className, icon, message, value, label }: NammaAreaRadioTileProps) {
+export default function NammaAreaRadioTile({ className,
+  icon,
+  message,
+  value, label,
+  disabled = false,
+  defaultChecked = false,
+  checked = false }: NammaAreaRadioTileProps) {
   return (
     <RadioTile label={label}
       className={clsx(className, "namma-area-radio-title")}
       icon={icon}
+      checked={checked}
+      disabled={disabled}
+      defaultChecked={defaultChecked}
       value={value}>
       {message}
     </RadioTile>

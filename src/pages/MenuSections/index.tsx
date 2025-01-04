@@ -67,7 +67,8 @@ export default function MenuSections() {
                   </Col>
                   <Col xs={24} sm={24} md={24} lg={8} xl={8} xxl={8} >
                     <MenuSectionsCountCard
-                      count={restaurant.menuSections.sections?.length || 0} />
+                      count={restaurant.menuSections.sections?.length || 0} 
+                      />
                   </Col>
                 </Row>
               </Grid>

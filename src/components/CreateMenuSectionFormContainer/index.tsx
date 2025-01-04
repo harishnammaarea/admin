@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react"
 import { MenuSection } from "core/models/menu"
-import { RowDataType } from "rsuite/esm/Table"
 import Button from "shared/components/Button"
 import { Field, Form as FinalForm } from "react-final-form"
 import AddIconCircularIcon from "shared/icons/AddIconCircularIcon"
@@ -14,14 +13,14 @@ import CommonCard from "shared/components/CommonCard"
 
 interface CreateMenuSectionFormContainerProps {
   onCreateMenuSection(values: CreateMenuSectionPayload): void
-  data?: RowDataType<MenuSection> | null
+  data?: MenuSection | null
   onUpdateRestaurantMenuSection?(data: UpdateMenuSectionProps): void
   className?: string
 }
 
 interface CreateMenuSectionFormProps {
   name: string
-  subSectionName: string
+  subSectionName?: string
 }
 
 export interface CreateMenuSectionPayload {
@@ -44,6 +43,7 @@ export default function CreateMenuSectionFormContainer({
 
   useEffect(() => {
     if (data) {
+      setInitialValues({ name: data.sections[0].name })
     }
   }, [data])
 

@@ -42,7 +42,7 @@ export default function MenuSectionsList({
   return (
     <>
       <CommonModal
-        size="full"
+        size="lg"
         onClose={() => { setSelectedSubSection(null) }}
         open={!!selectedSubSection}>
         <SubSectionList
@@ -103,7 +103,7 @@ export default function MenuSectionsList({
         </Column>
         <Column width={150}>
           <HeaderCell align="center">...</HeaderCell>
-          <Cell align="center" >
+          <Cell align="center">
             {rowData => (
               <Link to={`/restaurants/menu-section/update/${rowData._id}`}>
                 <span

@@ -45,8 +45,13 @@
         cursor: pointer;
       }
 
-      .login-container-form-submit-button {
-        margin-top: 2rem;
+      .login-container-form-submit-button-container {
+        width: 100%;
+
+        .login-container-form-submit-button {
+          margin-top: 2rem;
+          width: 100% !important;
+        }
       }
     }
   }

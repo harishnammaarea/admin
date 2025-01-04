@@ -15,7 +15,8 @@ import { Link } from "react-router-dom";
 import { validate } from "./validate";
 import bgImage from "assets/background/top-view-meals-tasty-yummy-different-pastries-dishes-brown-surface-min-min.jpg";
 import { NotifierContext } from "App/Notifier";
-import { Field } from "react-final-form";
+import { Field, Form as FinalForm } from "react-final-form";
+import ArrowWithLineIcon from "shared/icons/ArrowWithLineIcon";
 
 interface LoginContainerProps {
   className?: string
@@ -32,7 +33,7 @@ export type Role = { role: string | number }
 
 export default function LoginContainer({ className, onLogin }: LoginContainerProps) {
   const [passwordShow, setPaswordShow] = useState<boolean>(false)
-  const [role, setRole] = useState<string | number>("")
+  const [role, setRole] = useState<string | number>("super-admin")
   const { showNotification } = useContext(NotifierContext)
 
   function handleFormSubmit(values: FormProps) {
@@ -52,41 +53,42 @@ export default function LoginContainer({ className, onLogin }: LoginContainerPro
         className={clsx('login-container-left-wrapper', className)}>
         <img src={logo} alt="" width={170} height={30} />
         <h3>Welcome! please provide the below details.</h3>
-        <RadioTileGroup inline={true} onChange={value => { setRole(value) }}>
+        <RadioTileGroup defaultValue="super-admin" inline={true} onChange={value => { setRole(value) }}>
           <NammaAreaRadioTile
             value="super-admin"
             icon={<AdminIcon fontSize="3rem" color="#5449f0" />}
             label="Super admin?"
           />
           <NammaAreaRadioTile
-            value="area-admin"
+            value="delivery-contractor"
             icon={<LocationIcon fontSize="3rem" color="#5449f0" />}
-            label="Area Admin?"
+            label="Delivery Contractor?"
           />
         </RadioTileGroup>
         <div className="login-container-login-form-container">
-          <Form fluid onSubmit={() => { }}>
-            <Field
-              name="email"
-              component={InputWithLabel}
-              label="Email"
-              placeholder="Enter your user ID"
-              icon={<ProfileIcon color={PRIMARY_COLOR} />}
-            />
-            <Field
-              name="password"
-              type={passwordShow ? "text" : "password"}
-              component={InputWithLabel}
-              onClickIcon={() => { setPaswordShow(!passwordShow) }}
-              icon={passwordShow ? <OpenEyeIcon color={PRIMARY_COLOR} /> : <ClosedEyeIcon color={PRIMARY_COLOR} />}
-              label="Password"
-              placeholder="Enter your password"
-            />
-            <Link to="" className="login-container-login-form-forget-password-link">
-              <h4 className="login-container-login-form-forget-password">Forgot Password?</h4>
-            </Link>
-            <Button label="Login" type="submit" className="login-container-form-submit-button" />
-          </Form>
+          <FinalForm
+            onSubmit={handleFormSubmit}
+            validate={validate}
+            render={({ handleSubmit }) => (
+              <Form fluid onSubmit={() => { handleSubmit() }}>
+                <Field
+                  name="email"
+                  component={InputWithLabel}
+                  label="Email"
+                  placeholder="Enter your Email "
+                  icon={<ProfileIcon color={PRIMARY_COLOR} />}
+                />
+                <div className="login-container-form-submit-button-container">
+                  <Button
+                    icon={<ArrowWithLineIcon color="#ffffff" rotate={180} />}
+                    iconPosition="end"
+                    label="Log in"
+                    type="submit"
+                    className="login-container-form-submit-button" />
+                </div>
+              </Form>
+            )}
+          />
         </div>
       </div>
     </div>)

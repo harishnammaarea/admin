@@ -7,7 +7,6 @@ export interface MenuSection {
 }
 
 export interface Section {
-  sections: any
   _id: string
   name: string
   subSections: SubSection[]

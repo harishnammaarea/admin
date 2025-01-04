@@ -14,7 +14,3 @@ export default function OpenEyeIcon({ className, fontSize = "1.6rem", rotate = 0
       <path d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>)
 }
-
-// 5372060018941685
-// 07/31
-// 442
